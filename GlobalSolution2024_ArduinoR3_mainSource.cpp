@@ -851,7 +851,6 @@ lcd.clear();
 
 
 void image20() {
-  // Liga e desliga a mensagem na segunda linha
   lcd.setCursor(0, 0);
   lcd.print("Moskitto GS 2024");
   lcd.setCursor(0, 1);
