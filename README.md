@@ -27,6 +27,9 @@ Antes de começar a montagem do projeto, deve-se prestar atenção em alguns det
 - Dependendo da placa utilizada, é possível adicionar mais (ou menos) células solares conforme a disponibilidade de portas GPIO analógicas.
 - Preste muita atenção ao alterar ou adicionar células solares nas placas de desenvolvimento, pois nem todas as portas GPIO analógicas estão completamente disponíveis, por exemplo, no Arduino Uno R3, as portas A4 (SDA) e A5 (SCL) são utilizadas para comunicação I2C.
 
+## Exemplo de Montagem:
+![esquema](./GlobalSolution_GrupoMoskittoGS_2024_release_v1_schem.png "Montagem de Exemplo")
+
 ## Instalação e Utilização:
 1. Conecte o Arduino Uno R3 em um computador com o software _Arduino IDE_ instalado.
 2. Selecione a placa e porta serial correspondentes ao seu hardware (_Select Board_).
@@ -34,7 +37,7 @@ Antes de começar a montagem do projeto, deve-se prestar atenção em alguns det
 4. Copie o [código fonte](https://github.com/kato8088/GlobalSolution2024_EdgeComputing_MoskittoGS_1ESPA/blob/main/GlobalSolution2024_ArduinoR3_mainSource.cpp) e cole na interface de desenvolvimento.
 5. Compile e envie (_Verify & Upload_) o programa para a placa Arduino.
 6. Após a conclusão do processo, desconecte o Arduino do computador e a placa estará programada corretamente.
-7. Monte os componentes na placa (use o esquema fornecido de exemplo como base para a montagem).
+7. Monte os componentes na placa (use a imagem fornecida de exemplo como base para a montagem).
 8. Pronto!
 
 ## Funcionamento e Detalhes Técnicos:
