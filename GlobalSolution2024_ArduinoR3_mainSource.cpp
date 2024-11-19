@@ -8,29 +8,30 @@
 
 #include <LiquidCrystal_I2C.h>
 
-LiquidCrystal_I2C lcd(0x27, 16, 2);
+LiquidCrystal_I2C lcd(0x27, 16, 2); // Configurando o display 16x2 com o endereço 39 (hex. 0x27)
 
+// Função principal de medição e conversão da voltagem das Células Solares
 float medicaoVoltagem(int idPlaca){
-  float volts = analogRead(idPlaca) * (5.0 / 1023.0);
+  float volts = analogRead(idPlaca) * (5.0 / 1023.0); // Algorítmo de conversão dos valores 10-bit raw do voltímetro integrado ao Arduino Uno R3 em voltagem legível
   lcd.clear();
   lcd.setCursor(0,0);
   lcd.print("Celula Solar #");
-  lcd.print(idPlaca + 1);
+  lcd.print(idPlaca + 1); // Adiciona +1 ao ID da Célula Solar para apresentar o texto de modo amigável ao usuário
   lcd.setCursor(0,1);
   lcd.print(volts);
   lcd.print(" V");
 }
 
 void setup() {
-  Serial.begin(9600);
-  lcd.init();
+  Serial.begin(9600); // Inicia a comunicação serial com uma taxa de 9600 baud
+  lcd.init(); // Inicializar o display 16x2 com I2C
   lcd.backlight();
-  splashScreen();
+  splashScreen(); // Bootlogo do Grupo Moskitto
 }
 
 void loop() {
-  medicaoVoltagem(0);
-  delay(2000);
+  medicaoVoltagem(0); // Chamada da função de medição com o ID da Célula Solar
+  delay(2000); // Intervalo entre as exibições
   medicaoVoltagem(1);
   delay(2000);
   medicaoVoltagem(2);
@@ -852,15 +853,15 @@ lcd.clear();
 void image20() {
   // Liga e desliga a mensagem na segunda linha
   lcd.setCursor(0, 0);
-  lcd.print("M O S K I T T O");
-  delay(500);
-  lcd.clear();
-  delay(500);
+  lcd.print("Moskitto GS 2024");
   lcd.setCursor(0, 1);
-  lcd.print("M O S K I T T O");
-  delay(500);
+  lcd.print("Global Solution");
+  delay(2000);
   lcd.clear();
-  delay(500); // Espera 500 milissegundos
-  lcd.print("M O S K I T T O");
-  delay(1500); // Espera de 1,5 segundos para iniciar o programa
+  delay(250); // Espera 250 milissegundos
+  lcd.setCursor(0, 0);
+  lcd.print(" GlobalSolution ");
+  lcd.setCursor(0, 1);
+  lcd.print("Novembro de 2024");
+  delay(2000); // Espera de 2 segundos para iniciar o programa
 }
