@@ -27,6 +27,9 @@ Antes de começar a montagem do projeto, deve-se prestar atenção em alguns det
 - Dependendo da placa utilizada, é possível adicionar mais (ou menos) células solares conforme a disponibilidade de portas GPIO analógicas.
 - Preste muita atenção ao alterar ou adicionar células solares nas placas de desenvolvimento, pois nem todas as portas GPIO analógicas estão completamente disponíveis, por exemplo, no Arduino Uno R3, as portas A4 (SDA) e A5 (SCL) são utilizadas para comunicação I2C.
 
+## Vídeo no YouTube:
+[![Video](https://img.youtube.com/vi/uoWzRywvrPw/0.jpg)](https://www.youtube.com/watch?v=uoWzRywvrPw)
+
 ## Exemplo de Montagem:
 ![esquema](./GlobalSolution_GrupoMoskittoGS_2024_release_v1_schem.png "Montagem de Exemplo")
 
